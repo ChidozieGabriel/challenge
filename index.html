@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Andela Nigeria Cycle 45 Technical Challenge</title>
+  </head>
+  <body class="App">
+    <header class="App-header">
+      <h1>Andela Nigeria Cycle 45 Technical Challenge</h1>
+    </header>
+    <main class="App-main">
+      <div class="instruction">
+        <ol>
+          <li>
+            Enter rolled dice in the box e.g. 123
+          </li>
+          <li>
+            Total number of rolled dice must be greater than 2.
+          </li>
+          <li>
+            Valid dice values ranges from 1 to 6.
+          </li>
+          <li>
+            If a '1' is rolled, the next roll counts as 0!
+          </li>
+          <li>
+            If a '6' is rolled, the next roll is multiplied by 2!
+          </li>
+        </ol>
+      </div>
+      <div class="game">
+        <div class="interaction">
+          <form data-dice="form">
+            <input data-dice="input" />
+            <button type="submit">Roll Dice!</button>
+          </form>
+        </div>
+        <div class="message">
+          <span class="result" data-result="text"></span>
+          <span class="error" data-error="text"></span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
