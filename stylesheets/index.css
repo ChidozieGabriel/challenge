@@ -1,0 +1,114 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border-radius: 0.3em;
+  padding: 0.8em;
+  margin: 0.1em;
+  background: #f4f488;
+  border: 0.15em solid rgb(130, 102, 102);
+  color: rgb(130, 102, 102);
+}
+
+input:focus {
+  border: 0.15em solid rgb(59, 31, 31);
+  background: transparent;
+}
+
+input:hover {
+  /* border: 0.15em solid rgb(59, 31, 31); */
+}
+
+button {
+  border-radius: 0.3em;
+  padding: 0.6em;
+  margin: 0.1em;
+  background: #f4f488;
+  color: rgb(130, 102, 102);
+  border: 0.15em solid rgb(130, 102, 102);
+}
+
+button:hover {
+  color: #222;
+  border: 0.15em solid rgb(59, 31, 31);
+}
+
+button:active {
+  background: transparent;
+  color: #808080;
+}
+
+*:focus {
+  outline: none;
+}
+
+li + li {
+  margin-top: 1.5em;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #ffff88;
+  color: #222;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.App-header {
+  background: rgb(59, 31, 31);
+  color: #fefe88;
+  font-weight: bolder;
+  flex: 0 1 auto;
+  margin-bottom: 0;
+}
+
+.App-main {
+  flex: 1 1 auto;
+  display: flex;
+  overflow: auto;
+  min-height: 0;
+}
+
+.instruction {
+  width: 16em;
+  text-align: justify;
+  font-style: italic;
+  flex: 0 1 auto;
+  background: rgb(59, 31, 31);
+  color: #f4f488;
+  overflow: auto;
+}
+
+.instruction ol {
+  padding: 0 1.5em 0 2em;
+}
+
+.game {
+  flex: 1 1 auto;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.interaction {
+  margin: 0.5em;
+}
+
+.result {
+  font-weight: bold;
+  color: rgb(39, 11, 11);
+}
+
+.error {
+  color: rgb(250, 2, 2);
+  text-transform: lowercase;
+}
