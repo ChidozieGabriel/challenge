@@ -13,6 +13,10 @@ li {
   padding: 0;
 }
 
+li + li {
+  margin-top: 0.5em;
+}
+
 input {
   border-radius: 5px;
   color: rgb(75, 75, 75);
@@ -81,7 +85,6 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5px;
 }
 
 .game-header {
@@ -121,9 +124,10 @@ button:active {
   }
 
   .App-instruction {
-    width: 60%;
+    width: 35%;
     border-radius: 5px 0 0 5px;
     padding: 5px 0 5px 5px;
+    overflow: auto;
   }
 
   .game-interaction {
