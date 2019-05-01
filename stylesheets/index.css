@@ -53,6 +53,7 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100%;
 }
 
 .App-main {
@@ -63,7 +64,6 @@ button:active {
   align-items: center;
   border-radius: 5px;
   width: 90%;
-  min-height: 100%;
 }
 
 .App-instruction {
