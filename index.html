@@ -7,11 +7,8 @@
     <link rel="stylesheet" href="stylesheets/index.css" />
   </head>
   <body class="App">
-    <header class="App-header">
-      <h1>Andela Nigeria Cycle 45 Technical Challenge</h1>
-    </header>
     <main class="App-main">
-      <div class="instruction">
+      <div class="App-instruction">
         <ol>
           <li>
             Enter rolled dice in the box e.g. 123
@@ -31,15 +28,14 @@
         </ol>
       </div>
       <div class="game">
-        <div class="interaction">
-          <form data-dice="form">
-            <input data-dice="input" />
-            <button type="submit">Roll Dice!</button>
-          </form>
-        </div>
-        <div class="message">
-          <span class="result" data-result="text"></span>
-          <span class="error" data-error="text"></span>
+        <div class="game-header">Simple Dice Game</div>
+        <form class="game-interaction" data-dice="form">
+          <input data-dice="input" />
+          <button type="submit">Roll Dice!</button>
+        </form>
+        <div class="game-message">
+          <span class="message-result" data-result="text"></span>
+          <span class="message-error" data-error="text"></span>
         </div>
       </div>
     </main>

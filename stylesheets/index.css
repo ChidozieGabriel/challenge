@@ -3,112 +3,129 @@ body {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-input {
-  border-radius: 0.3em;
-  padding: 0.8em;
-  margin: 0.1em;
-  background: #f4f488;
-  border: 0.15em solid rgb(130, 102, 102);
-  color: rgb(130, 102, 102);
-}
-
-input:focus {
-  border: 0.15em solid rgb(59, 31, 31);
-  background: transparent;
-}
-
-input:hover {
-  /* border: 0.15em solid rgb(59, 31, 31); */
-}
-
-button {
-  border-radius: 0.3em;
-  padding: 0.6em;
-  margin: 0.1em;
-  background: #f4f488;
-  color: rgb(130, 102, 102);
-  border: 0.15em solid rgb(130, 102, 102);
-}
-
-button:hover {
-  color: #222;
-  border: 0.15em solid rgb(59, 31, 31);
-}
-
-button:active {
-  background: transparent;
-  color: #808080;
-}
-
 *:focus {
   outline: none;
 }
 
-li + li {
-  margin-top: 1.5em;
+ol,
+li {
+  margin: 10px;
+  padding: 0;
+}
+
+input {
+  border-radius: 5px;
+  color: rgb(75, 75, 75);
+  border: 1.5px solid rgb(75, 75, 75);
+  background: rgb(244, 244, 244);
+  padding: 8px;
+  margin: 2.5px;
+}
+
+input:focus {
+  background: transparent;
+  color: rgb(15, 15, 15);
+  border: 1.5px solid rgb(50, 50, 50);
+}
+
+button {
+  border-radius: 5px;
+  border: 1.5px solid rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
+  background: rgb(244, 244, 244);
+  padding: 5px;
+  margin: 2.5px;
+  align-self: center;
+}
+
+button:hover {
+  color: rgb(15, 15, 15);
+  border: 1.5px solid rgb(50, 50, 50);
+}
+
+button:active {
+  background: transparent;
 }
 
 .App {
+  margin: auto;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  background: #ffff88;
-  color: #222;
-  font-size: 16px;
-  overflow: hidden;
-}
-
-.App-header {
-  background: rgb(59, 31, 31);
-  color: #fefe88;
-  font-weight: bolder;
-  flex: 0 1 auto;
-  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-main {
-  flex: 1 1 auto;
+  box-shadow: -1px -1px 5px 0px black;
+  margin: auto;
   display: flex;
-  overflow: auto;
-  min-height: 0;
+  flex-direction: column-reverse;
+  align-items: center;
+  border-radius: 5px;
+  width: 90%;
 }
 
-.instruction {
-  width: 16em;
-  text-align: justify;
+.App-instruction {
+  width: 100%;
+  background: rgb(75, 75, 75);
+  color: rgb(244, 244, 244);
+  padding: 0;
   font-style: italic;
-  flex: 0 1 auto;
-  background: rgb(59, 31, 31);
-  color: #f4f488;
-  overflow: auto;
-}
-
-.instruction ol {
-  padding: 0 1.5em 0 2em;
+  border-radius: 0 0 5px 5px;
 }
 
 .game {
-  flex: 1 1 auto;
-  margin-top: 1.5em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5px;
 }
 
-.interaction {
-  margin: 0.5em;
+.game-header {
+  font-weight: 800;
+  margin: 15px 10px;
 }
 
-.result {
-  font-weight: bold;
-  color: rgb(39, 11, 11);
+.game-interaction {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px;
 }
 
-.error {
-  color: rgb(250, 2, 2);
+.game-message {
+  min-height: 2.2em;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.message-result {
+  color: rgb(0, 0, 0);
+  font-weight: 550;
+}
+
+.message-error {
+  color: rgb(250, 5, 5);
+  font-weight: 200;
   text-transform: lowercase;
+}
+
+@media all and (min-width: 768px) {
+  .App-main {
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .App-instruction {
+    width: 60%;
+    border-radius: 5px 0 0 5px;
+    padding: 5px 0 5px 5px;
+  }
+
+  .game-interaction {
+    flex-direction: row;
+  }
 }
