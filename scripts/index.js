@@ -2,10 +2,6 @@ const INPUT_SELECTOR = '[data-dice="input"]';
 const FORM_SELECTOR = '[data-dice="form"]';
 const RESULT_SELECTOR = '[data-result="text"]';
 const ERROR_SELECTOR = '[data-error="text"]';
-const KEY_CODE_1 = 49;
-const KEY_CODE_6 = 54;
-const KEY_CODE_DASH = 189;
-const KEY_CODE_ENTER = 13;
 
 const input = document.querySelector(INPUT_SELECTOR);
 const form = document.querySelector(FORM_SELECTOR);
@@ -33,7 +29,10 @@ input.addEventListener('input', () => {
 });
 
 input.addEventListener('keyup', () => {
-  input.value = get_valid(input.value);
+  const valid_value = get_valid(input.value);
+  if (valid_value.length !== input.value.length)
+    error.innerHTML = read_error('Invalid input!');
+  input.value = valid_value;
 });
 
 const get_array = str => {
@@ -41,25 +40,12 @@ const get_array = str => {
 };
 
 const rolls = dice_arr => {
-  let rolled_one = false;
-  let rolled_six = false;
-  let count = 0;
-
-  for (let i = 0; i < dice_arr.length; i++) {
-    const roll = dice_arr[i];
-    count += roll_value(roll, rolled_one, rolled_six);
-    rolled_one = rolled_six = false;
-    if (roll === 1) rolled_one = true;
-    if (roll === 6) rolled_six = true;
-  }
-
-  return count;
-};
-
-const roll_value = (roll, rolled_one, rolled_six) => {
-  if (rolled_one) return 0;
-  if (rolled_six) return 2 * roll;
-  return roll;
+  return dice_arr.reduce((sum, cur, idx, arr) => {
+    const prev = arr[idx - 1];
+    if (prev === 1) return sum;
+    if (prev === 6) return sum + 2 * cur;
+    return sum + cur;
+  });
 };
 
 const throw_error = arr => {
