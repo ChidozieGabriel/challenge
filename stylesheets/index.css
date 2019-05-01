@@ -64,6 +64,7 @@ button:active {
   align-items: center;
   border-radius: 5px;
   width: 90%;
+  height: 100%;
 }
 
 .App-instruction {
