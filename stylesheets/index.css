@@ -66,7 +66,7 @@ button:active {
 }
 
 .App-instruction {
-  width: 100%;
+  flex: 0 1 auto;
   background: rgb(75, 75, 75);
   color: rgb(244, 244, 244);
   padding: 0;
@@ -75,11 +75,11 @@ button:active {
 }
 
 .game {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: 5px;
 }
 
