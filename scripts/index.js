@@ -40,15 +40,16 @@ const get_array = str => {
 };
 
 const rolls = dice_arr => {
-  return dice_arr.reduce((sum, cur, idx, arr) => {
+  return dice_arr.reduce((sum, curr, idx, arr) => {
     const prev = arr[idx - 1];
     if (prev === 1) return sum;
-    if (prev === 6) return sum + 2 * cur;
-    return sum + cur;
+    if (prev === 6) return sum + 2 * curr;
+    return sum + curr;
   });
 };
 
 const throw_error = arr => {
+  if (arr.length === 0) throw new Error('Empty dice!');
   if (arr.length < 3)
     throw new Error(
       `Total dice rolled (${arr.length}) must be greater than 2 !`
